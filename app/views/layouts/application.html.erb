@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title>Kadai2</title>
     <%= csrf_meta_tags %>
@@ -10,6 +10,57 @@
   </head>
 
   <body>
+   <header class="navbar navbar-fixed-top navbar-inverse">
+     <div class="container">
+      <nav class="nav navbar-nav navbar-left">
+       <h3>Bookers</h3>
+    </nav>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+        <li class="">
+          <li><a class="glyphicon glyphicon-home home" href="/users/19197"> Home</a></li>
+        <li class="">
+          <li><a class="glyphicon glyphicon-user users" href="/users"> Users</a></li>
+        <li class="">
+          <li><a class="glyphicon glyphicon-book books" href="/books"> Books</a></li>
+        <li class="">
+          <li><a class="glyphicon glyphicon-log-out logout" rel="nofollow" data-method="delete" href="/users/sign_out"> logout</a></li>
+          <% else %>
+         <li class="">
+          <li><a class="glyphicon glyphicon-home home" href="/"> Home</a></li>
+          <li class="">
+          <li><a class="glyphicon glyphicon-link about" href="home/about"> About</a></li>
+          <li class="">
+          <li><a class="glyphicon glyphicon-edit sign_up" href="/users/sign_up"> sign up</a></li>
+          <li class="">
+          <li><a class="glyphicon glyphicon-log-in sign_in" href="/users/sign_in"> login</a></li>
+          <li><%= link_to "sign_out", destroy_user_session_path, method: :delete %></li>
+          <%end%>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<footer>
+
+   <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-9">
+        <p>CopyRight Infratop.inc</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
     <%= yield %>
   </body>
 </html>
