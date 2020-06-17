@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'homes#home'
   get "home/about" => "homes#about"
-  root'post_images#index'
+  root'books#new'
   resources :books
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-end
+  resources :users
+  # Forr details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ end

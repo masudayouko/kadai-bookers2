@@ -1,0 +1,30 @@
+<h2>New book</h2>
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+     <h3><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
+  <ul>
+    <% @book.errors.full_messages.each do |message|%>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+
+   <div class="field row">
+    <div class="col-xs-12">
+    <h5>Title</h5>
+    <%= f.text_field :title %>
+    </div>
+  </div>
+
+    <div class="field row">
+    <div class="col-xs-12">
+    <h5>opinion</h5>
+    <%= f.text_area :body %>
+    </div>
+  </div>
+
+   <br>
+    <%= f.submit 'Create Book',class:"btn btn-primary col-xs-12" %>
+ 
+  <% end %>
