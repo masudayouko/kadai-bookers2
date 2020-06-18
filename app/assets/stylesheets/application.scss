@@ -16,6 +16,18 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+* {
+	box-sizing: border-box;
+}
+
+.container {
+     margin-right: auto; 
+     margin-left: auto; 
+     padding-left: 15px; 
+     padding-right: 15px; 
+}
+
+
 
 header {
 	color: white;
@@ -31,5 +43,19 @@ div {
 }
 
 body {
-	margin-top: 70p;
+	margin-top: 40p;
+}
+
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+}
+
+
+.col-xs-9 {
+	width: 75%;
+}
+
+.col-xs-3 {
+	width: 25%;
 }
