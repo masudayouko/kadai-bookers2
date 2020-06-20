@@ -7,15 +7,24 @@ class UsersController < ApplicationController
   end
 
   def index
+    @book = Book.new
+    @users = User.all
+    
+  end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to user_path(@user)
   end
 
 
-  def create
-  	@book = Book.new(book_params)
-  	
-    @book.save
-    redirect_to user_path(params[:id]), notice: 'Book was successfully created.'
+  def user_params
+  	params.require(:user).permit(:profile_image,:name,:introduction)
   end
-
 end
+
