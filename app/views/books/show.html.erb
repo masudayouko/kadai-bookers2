@@ -1,2 +1,32 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="body">
+  <div class="container">
+    <p id="notice"></p>
+     <div class="row">
+     	<%= render 'users/a', user: current_user, book: @book) %>
+     	<div class="col-xs-9">
+
+     <h1>Book detail</h1>
+    <table class="table table-striped">
+     <thead>
+     <tr>
+      
+     <th>
+     <th colspan="3"></th>
+     </tr>
+     </thead>
+
+     <tbody>
+     
+     <tr>
+      <th><%= attachment_image_tag(@book.user, :profile_image, :fill,100,100, fallback: "no_image.jpg",size: "100x100")%></th>
+     <th colspan="3"></th>
+      <td><%= @book.title %><td>
+      <td><%= @book.body %></td>
+      </tr>
+      
+     </tbody>
+     </table>
+   </div>
+  </div>
+ </div>
+</div>
