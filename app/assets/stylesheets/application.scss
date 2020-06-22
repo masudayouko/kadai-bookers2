@@ -21,29 +21,33 @@
 }
 
 .container {
-     margin-right: auto; 
-     margin-left: auto; 
-     padding-left: 15px; 
-     padding-right: 15px; 
+     margin-right: auto;
+     margin-left: auto;
+     padding-left: 15px;
+     padding-right: 15px;
 }
 
-
+.navbar-fixed-top {
+	top: 0;
+    border-width: 0 0 1px;
+}
 
 header {
 	color: white;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 }
 
 head {
 	display: none;
 }
 
+
 div {
 	display: block;
 }
 
 body {
-	margin-top: 40p;
+	margin-top: 80p;
 }
 
 
@@ -59,3 +63,16 @@ body {
 .col-xs-3 {
 	width: 25%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,7 +10,7 @@
   </head>
 
   <body>
-   <header class="navbar navbar-fixed-top navbar-inverse">
+   <header class="navbar navbar-inverse">
      <div class="container">
       <nav class="nav navbar-nav navbar-left">
        <h3>Bookers</h3>
@@ -43,16 +43,21 @@
   </div>
 </header>
 
-<footer>
+<% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "#{key}") %>
+<% end %>
+
 
    <div class="container">
-    <div class="row">
+
+    <%= yield %>
+  </div>
+  <footer>
+     <div class="row">
       <div class="col-xs-3 col-xs-offset-9">
         <p>CopyRight Infratop.inc</p>
       </div>
     </div>
-    <%= yield %>
-  </div>
 </footer>
 </body>
 </html>

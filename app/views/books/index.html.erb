@@ -1,10 +1,16 @@
 
 <div class="body">
   <div class="container">
-    <p id="notice"></p>
+    
      <div class="row">
        <%= render 'users/a', user: current_user, book: @book %>
 <div class="col-xs-9">
+  <br><br>
+  <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 <h1>Books</h1>
      <table class="table table-striped">
      <thead>
