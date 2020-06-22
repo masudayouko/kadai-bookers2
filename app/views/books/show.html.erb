@@ -3,12 +3,8 @@
      <div class="row">
      	<%= render 'users/a', user: @book.user, book: @newbook %>
      	<div class="col-xs-9">
-        <br><br>
-        <% if flash[:notice] %>
-      <div class="flash">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
+       
+    
      <h3>Book detail</h3>
     <table class="table table-striped">
      <thead>
