@@ -1,8 +1,8 @@
 <div class="body">
   <div class="container">
-    <p id="notice"></p>
+    <p id="notice"><%=  notice %></p>
      <div class="row">
-     	<%= render 'users/a', user: current_user, book: @book) %>
+     	<%= render 'users/a', user: current_user, book: @newbook %>
      	<div class="col-xs-9">
 
      <h1>Book detail</h1>
@@ -22,6 +22,10 @@
      <th colspan="3"></th>
       <td><%= @book.title %><td>
       <td><%= @book.body %></td>
+      <% if @book.user == current_user %>
+      <td><%= link_to "Edit", edit_book_path(@book)%></td>
+      <td><%= link_to "Destroy",book_path(@book),method: :delete %>
+        <% end %>
       </tr>
       
      </tbody>
